@@ -14,11 +14,26 @@ public class HomePage extends PageObject {
     @FindBy(css = "a[title='Log In']")
     private WebElementFacade loginLink;
 
+    @FindBy(id = "search")
+    private WebElementFacade searchField;
+
+    @FindBy(css = "button[title='Search']")
+    private WebElementFacade searchButton;
+
     public void clickAccount(){
+        System.out.println(accountLink.getText());
         clickOn(accountLink);
     }
 
     public void clickLoginLink(){
         clickOn(loginLink);
+    }
+
+    public void setSearchField(String text){
+        typeInto(searchField,text);
+    }
+
+    public void clickSearch(){
+        clickOn(searchButton);
     }
 }

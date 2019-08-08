@@ -1,6 +1,7 @@
 package org.fasttrack.steps;
 
 import net.thucydides.core.annotations.Step;
+import net.thucydides.core.annotations.Steps;
 import org.fasttrack.pages.AccountPage;
 import org.fasttrack.pages.HomePage;
 import org.fasttrack.pages.LoginPage;
@@ -34,6 +35,11 @@ public class LoginSteps {
     @Step
     public void checkNotLoggedIn(){
         loginPage.verifyNotLoggedIn();
+    }
+
+    @Step
+    public void navigateToHomepage(){
+        homePage.open();
     }
 
 }

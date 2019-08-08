@@ -33,7 +33,7 @@ public class LoginPage extends PageObject {
     }
 
     public void verifyNotLoggedIn(){
-        errorMessageSpan.shouldContainText("Invalid login or password.");
+        errorMessageSpan.shouldContainText("Invalid login or password");
     }
 
 
